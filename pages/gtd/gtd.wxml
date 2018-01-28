@@ -1,0 +1,10 @@
+<!--pages/gtd/gtd.wxml-->
+<view class='container'> 
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">允许QuizMe在接下来的一周给你发送一条提醒</view>
+    <switch name="switch"/>
+  </view>
+  
+</form>
+</view>

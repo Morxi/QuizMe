@@ -1,0 +1,13 @@
+<view class='questioncainer'>
+<progress percent="{{curPercent}}" stroke-width="10" color='{{progessColor}}' />
+
+<view class="headLine"><text class="headLine">{{cur}}.{{question}}</text></view>
+
+<button bindtap="clickMe" class="selection" id='1'><text class='answertext'>{{sel1}}</text></button>
+<button bindtap="clickMe" class="selection" id='2'><text class='answertext'>{{sel2}}</text></button>
+<button bindtap="clickMe" class="selection" id='3'><text class='answertext'>{{sel3}}</text></button>
+<button bindtap="clickMe" class="selection" id='4'><text class='answertext'>{{sel4}}</text></button>
+<view class='container'>
+<text style='color:red'>{{errorState}}</text>
+</view>
+</view>

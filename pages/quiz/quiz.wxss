@@ -1,0 +1,16 @@
+/* quiz.wxss */
+.isRight{
+  background-color: greenyellow;
+  align-content: center;
+}
+.headLine{
+  margin: 50rpx;
+}
+.selection{
+  margin-left: 10%;
+  margin-top:20rpx;
+  margin-right: 10%;
+}
+.answertext{
+
+}

@@ -1,0 +1,32 @@
+/**index.wxss**/
+.userinfo {
+
+   display: flex; 
+  flex-direction: column;
+}
+
+.userinfo-avatar {
+   width: 128rpx;
+  height: 128rpx; 
+    margin-left: 20rpx;  
+   border-radius: 20%; 
+  align-items: left;  
+}
+
+.userinfo-nickname {
+  align-self: flex-start;
+  justify-content:flex-start;
+  color: #aaa;
+}
+
+.saying {
+
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.startButton {
+    font-family:"Microsoft YaHei";
+    font-style: bold;
+  margin-top: 30px;
+}

@@ -1,0 +1,27 @@
+<!--index.wxml-->
+
+
+<view class="container">
+  <view class="saying">
+    <text style="font-size:20pt;color:gray;padding-right:2px;padding-left:2px;margin-left:50px">有人说: </text>
+    <text  style="font-size:12pt">{{sayin}}</text>
+      
+
+  </view>
+  <button open-type='startQuiz' bindtap='startQuiz' class="startButton" type="primary" >来一题</button>
+   <button open-type='startQuiz' bindtap='clickGTD' class="startButton">设置GTD</button>
+    <button open-type='startQuiz' bindtap='aboutQuiz' class="startButton">关于QuizMe</button>
+
+  <view>
+  <text style="font-size:8pt">
+
+
+
+
+
+     当前客户端版本：v0.02
+     当前服务端版本：{{version}}
+     当前微信客户端API版本:{{wxVersion}}
+  </text>
+  </view>
+</view>
