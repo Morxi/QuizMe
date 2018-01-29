@@ -136,6 +136,7 @@ onHide: function () {
  */
 onUnload: function () {
   clearInterval(timer);
+  current=1;
 
 },
 
@@ -163,6 +164,7 @@ onShareAppMessage: function () {
 onLoad: function()
 {
   proggessState=1;
+
   that = this;  //将this传给that，此处的this可以调用setData
   this.setData({ cur: current })
   getQuestion();
