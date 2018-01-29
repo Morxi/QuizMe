@@ -1,4 +1,7 @@
 /* quiz.wxss */
+page{
+  background-color: #ffffff;
+}
 .isRight{
   background-color: greenyellow;
   align-content: center;

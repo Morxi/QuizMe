@@ -11,6 +11,29 @@ function getDateUntilEnding()
 }
 Page({
   data: {
+    list: [
+      {
+        id: 'form',
+        name: '来答题',
+        open: false,
+        pages: ['计算机', '其他科目敬请期待']
+      },
+      {
+        id: 'widget',
+        name: '基础组件',
+        open: false,
+        pages: ['article', 'badge', 'flex', 'footer', 'gallery', 'grid', 'icons', 'loadmore', 'panel', 'preview', 'progress']
+      },
+      // {
+      //   id: 'about',
+      //   name: '关于QuizMe',
+      //   open: false,
+      //   pages: ['article']
+      // },
+
+    ],
+    isAboutOpen:false,
+    isQuizOpen:false,
     motto: 'Hello World',
     saying: '加载中...',
     wxVersion: '加载中...',
@@ -20,6 +43,35 @@ Page({
   },
   
   //事件处理函数
+  customToggle: function(){
+    
+    var tempisAboutOpen = !this.data.isAboutOpen;
+    this.setData({
+      isAboutOpen : tempisAboutOpen
+    })
+  },
+  quizToggle: function () {
+
+    var tempisAboutOpen = !this.data.isQuizOpen;
+    this.setData({
+      isQuizOpen: tempisAboutOpen
+    })
+  },
+  kindToggle: function (e) {
+    var id = e.currentTarget.id, list = this.data.list;
+    console.log(list)
+    for (var i = 0, len = list.length; i < len; ++i) {
+      if (list[i].id == id) {
+        list[i].open = !list[i].open
+      } else {
+        list[i].open = false
+      }
+    }
+    this.setData({
+      list: list
+    });
+  },
+
   bindViewTap: function () {
     wx.navigateTo({
       url: '../usercenter/usercenter'

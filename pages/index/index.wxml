@@ -1,17 +1,80 @@
 <!--index.wxml-->
 
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">有人说: </view>
+    <text class="selction_gray">{{sayin}}</text>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="kind-list">
 
-<view class="container">
-    <view class="saying">
-      <text style="font-size:20pt;color:gray;padding-right:2px;padding-left:2px;margin-left:50px">有人说: </text>
-      <text style="font-size:12pt">{{sayin}}</text>
+      <!-- 对照weui-demo用一种不太优雅（十分暴力）的方法写的选单 -->
+      <view class="kind-list__item">
+        <!-- ‘？’是什么啊‘：‘又是什么鬼，文档倒是好好写啊腾讯开发这群八嘎，文档中心就没搜到几个有用的东西，坑我是个搞嵌入式的高中生吗 -->
+        <view class="weui-flex kind-list__item-hd {{isQuizOpen ? 'kind-list__item-hd_show' : ''}}" bindtap="quizToggle">
+          <view class="weui-flex__item">来刷题</view>
+          <image class="kind-list__img" src="/pages/images/icon_nav_quiz.svg"></image>
+        </view>
+        <view class="kind-list__item-bd {{isQuizOpen ? 'kind-list__item-bd_show' : ''}}">
+          <view class="weui-cells {{isQuizOpen ? 'weui-cells_show' : ''}}">
+            <navigator class="weui-cell weui-cell_access" url="/pages/quiz/quiz">
+              <view class="weui-cell__bd" indtap='aboutQuiz'>湖北技能高考计算机</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
+            </navigator>
+            <navigator class="weui-cell weui-cell_access">
+              <view class="weui-msg__desc" indtap='aboutQuiz'disabled='disabled'>其他科目敬请期待</view>
+              <!-- <view class="weui-cell__ft weui-cell__ft_in-access"></view> -->
+
+            </navigator>
+
+          </view>
+        </view>
+        <view class="weui-flex kind-list__item-hd {{isAboutOpen ? 'kind-list__item-hd_show' : ''}}" bindtap="customToggle">
+          <view class="weui-flex__item">更多选项</view>
+          <image class="kind-list__img" src="/pages/images/icon_nav_more.svg"></image>
+        </view>
+        <view class="kind-list__item-bd {{isAboutOpen ? 'kind-list__item-bd_show' : ''}}">
+          <view class="weui-cells {{isAboutOpen ? 'weui-cells_show' : ''}}">
+            <navigator class="weui-cell weui-cell_access" url="/pages/logs/logs">
+              <view class="weui-cell__bd" indtap='aboutQuiz'>刷题历史</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" url="/pages/about/about">
+              <view class="weui-cell__bd" indtap='aboutQuiz'>关于QuizMe</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+
+            </navigator>
+
+            <navigator class="weui-cell_access" style="padding-top:1px;color: #999;font-size: 14px; flex-direction:row; padding:10px 15px;border-top:1rpx solid #d9d9d9;">
+              <view>当前客户端版本：v0.02</view>
+              <view>当前服务端版本：{{version}}</view>
+              <view>当前微信客户端API版本:{{wxVersion}}</view>
+            </navigator>
+
+          </view>
+        </view>
+      </view>
     </view>
-  <button  bindtap='startQuiz' class="startButton" type="primary" size="default"><text>来刷题</text></button>
-  <button  bindtap='clickGTD' class="startButton" size="default">刷题历史</button>
-  <button  bindtap='aboutQuiz' class="startButton" size="default">关于QuizMe</button>
+  </view>
+  <view class="page__ft">
+    <image src="images/icon_footer.png" style="width: 84px; height: 19px;"></image>
+  </view>
+</view>
+<!-- 原始的主页，留着纪念吧，好歹是完全自己写的 -->
+<!-- <view class="container">
+  <view class="saying">
+
+  </view>
+  <button bindtap='startQuiz' class="startButton" type="primary" size="default">
+    <text>来刷题</text>
+  </button>
+  <button bindtap='clickGTD' class="startButton" size="default">刷题历史</button>
+  <button bindtap='aboutQuiz' class="startButton" size="default">关于QuizMe</button>
 
 
-    <text style="font-size:8pt">
+  <text style="font-size:8pt">
 
 
 
@@ -21,4 +84,4 @@
      当前服务端版本：{{version}}
      当前微信客户端API版本:{{wxVersion}}
   </text>
-  </view>
+</view> -->
