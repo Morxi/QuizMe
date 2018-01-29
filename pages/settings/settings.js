@@ -1,4 +1,4 @@
-// pages/notice/notice.js
+// pages/settings/settings.js
 Page({
 
   /**

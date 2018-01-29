@@ -1,5 +1,0 @@
-/* pages/gtd/gtd.wxss */
-.container
-{
-  margin: 50rpx;
-}

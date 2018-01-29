@@ -52,7 +52,7 @@ Page({
       title: '距高考还有'+still+'天'
     })
     wx.request({
-      url: 'https://quiz.morusang.com/getsaying.php',
+      url: 'https://www.morusang.com/quiz/getsaying.php',
       success: res => {
         console.log(res);
         this.setData({
