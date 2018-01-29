@@ -18,6 +18,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -36,10 +37,16 @@ Page({
   },
   clickGTD: function(){
     wx.navigateTo({
-      url: '../gtd/gtd'
+      url: '../logs/logs'
     })
   },
   onLoad: function () {
+
+      if(wx.getStorageSync('questdata')=="")
+      {
+      wx.setStorageSync('questdata', 0)
+    }
+    
    getDateUntilEnding();
     wx.setNavigationBarTitle({
       title: '距高考还有'+still+'天'
@@ -56,7 +63,7 @@ Page({
 
 
     wx.request({
-      url: 'https://quiz.morusang.com/version.php',
+      url: 'https://www.morusang.com/quiz/version.html',
       success: res => {
         this.setData({
           version: res.data

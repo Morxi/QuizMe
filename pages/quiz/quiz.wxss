@@ -12,5 +12,8 @@
   margin-right: 10%;
 }
 .answertext{
-
+  margin: 10px;
+  max-height:90%;
+  margin-inline-end: 8px;
 }
+

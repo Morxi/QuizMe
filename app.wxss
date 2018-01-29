@@ -8,3 +8,15 @@
   padding: 20rpx 0;
   box-sizing: border-box; 
 } 
+.selction{
+  color: #888888;
+  font-weight: 600;
+  font-size: 14pt;
+
+}
+.headline{
+  color:#353535;
+  font-weight: 600;
+  font-size: 17pt;
+
+}

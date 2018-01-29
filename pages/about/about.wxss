@@ -18,3 +18,8 @@
 .usermotto {
   margin-top: 200px;
 }
+.abouts{
+  /* font-size: 17pt; */
+  margin: 70rpx;
+   padding: 20rpx;
+}

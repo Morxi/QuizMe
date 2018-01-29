@@ -18,6 +18,12 @@ function answerQuestion(id) {
       cur: current,
       errorState: ""
     })
+
+      var value = wx.getStorageSync('questdata')
+        wx.setStorageSync('questdata', value+1)
+          console.log(value)
+   
+    
     proggessState = 1;
 
   }
@@ -129,6 +135,7 @@ onHide: function () {
  * 生命周期函数--监听页面卸载
  */
 onUnload: function () {
+  clearInterval(timer);
 
 },
 

@@ -9,13 +9,22 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  // //事件处理函数
+  // bindViewTap: function () {
+  //   wx.navigateTo({
+  //     url: '../logs/logs'
+  //   })
+  // },
   onLoad: function () {
+    wx.request({
+      url: 'https://www.morusang.com/quiz/about.html',
+      success: res => {
+        console.log(res);
+        this.setData({
+          about: res.data
+        })
+      }
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

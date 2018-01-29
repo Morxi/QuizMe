@@ -2,18 +2,16 @@
 
 
 <view class="container">
-  <view class="saying">
-    <text style="font-size:20pt;color:gray;padding-right:2px;padding-left:2px;margin-left:50px">有人说: </text>
-    <text  style="font-size:12pt">{{sayin}}</text>
-      
+    <view class="saying">
+      <text style="font-size:20pt;color:gray;padding-right:2px;padding-left:2px;margin-left:50px">有人说: </text>
+      <text style="font-size:12pt">{{sayin}}</text>
+    </view>
+  <button  bindtap='startQuiz' class="startButton" type="primary" size="default"><text>来刷题</text></button>
+  <button  bindtap='clickGTD' class="startButton" size="default">刷题历史</button>
+  <button  bindtap='aboutQuiz' class="startButton" size="default">关于QuizMe</button>
 
-  </view>
-  <button open-type='startQuiz' bindtap='startQuiz' class="startButton" type="primary" >来一题</button>
-   <button open-type='startQuiz' bindtap='clickGTD' class="startButton">设置GTD</button>
-    <button open-type='startQuiz' bindtap='aboutQuiz' class="startButton">关于QuizMe</button>
 
-  <view>
-  <text style="font-size:8pt">
+    <text style="font-size:8pt">
 
 
 
@@ -24,4 +22,3 @@
      当前微信客户端API版本:{{wxVersion}}
   </text>
   </view>
-</view>
